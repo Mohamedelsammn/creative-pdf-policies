@@ -1,0 +1,68 @@
+:root {
+  --primary: #087cff;
+  --primary-dark: #0663cc;
+  --pale: #eaf3ff;
+  --navy: #111a38;
+  --muted: #5e6c88;
+  --divider: #e6ecf5;
+  --surface: #f6f9fd;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--navy);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+header.site { border-bottom: 1px solid var(--divider); background: var(--white); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--navy); font-weight: 700; font-size: 18px; }
+.brand:hover { text-decoration: none; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+nav.links { display: flex; gap: 6px; flex-wrap: wrap; }
+nav.links a { padding: 6px 12px; border-radius: 999px; font-size: 15px; font-weight: 600; color: var(--muted); }
+nav.links a:hover { background: var(--surface); color: var(--navy); text-decoration: none; }
+nav.links a[aria-current="page"] { background: var(--pale); color: var(--primary); }
+main { padding: 40px 0 56px; }
+.hero { text-align: center; padding: 24px 0 8px; }
+.hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 8px 24px rgba(17, 26, 56, .10); }
+.hero h1 { font-size: 34px; line-height: 1.2; margin: 20px 0 6px; letter-spacing: -.01em; }
+.hero .tagline { color: var(--muted); font-size: 18px; margin: 0 0 18px; }
+.hero .about { max-width: 600px; margin: 0 auto; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 36px 0 8px; }
+.card { display: block; border: 1px solid var(--divider); border-radius: 16px; padding: 20px; color: var(--navy); background: var(--white); transition: border-color .15s, box-shadow .15s; }
+.card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(8, 124, 255, .10); text-decoration: none; }
+.card h2 { margin: 0 0 4px; font-size: 19px; color: var(--primary); }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card .alt { display: inline-block; margin-top: 10px; font-size: 15px; }
+.doc-head { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.doc-head .badge { width: 48px; height: 48px; flex: none; border-radius: 50%; background: var(--pale); display: grid; place-items: center; }
+.doc-head .badge svg { width: 24px; height: 24px; stroke: var(--primary); }
+h1.doc { font-size: 30px; line-height: 1.25; margin: 0; }
+.effective { color: var(--muted); margin: 2px 0 0; font-size: 15px; }
+.intro { font-weight: 500; margin: 24px 0 8px; }
+article h2 { font-size: 20px; margin: 32px 0 6px; padding-top: 4px; }
+article p { margin: 0 0 12px; }
+.toc { background: var(--surface); border: 1px solid var(--divider); border-radius: 16px; padding: 14px 20px; margin: 24px 0 8px; }
+.toc p { margin: 0 0 6px; font-weight: 600; font-size: 15px; color: var(--muted); }
+.toc ol { margin: 0; padding-inline-start: 22px; }
+.toc li { margin: 2px 0; font-size: 15px; }
+.contact { margin-top: 36px; padding: 16px 20px; border-radius: 16px; background: var(--pale); }
+.contact p { margin: 0; }
+footer.site { border-top: 1px solid var(--divider); color: var(--muted); font-size: 14px; }
+footer.site .wrap { padding: 20px; display: flex; gap: 8px 16px; flex-wrap: wrap; justify-content: space-between; }
+footer.site a { color: var(--muted); }
+[dir="rtl"] body, body[dir="rtl"] { text-align: right; }
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  main { padding: 28px 0 40px; }
+  .hero h1 { font-size: 28px; }
+  h1.doc { font-size: 25px; }
+  header.site .wrap { padding-top: 10px; padding-bottom: 10px; }
+}
